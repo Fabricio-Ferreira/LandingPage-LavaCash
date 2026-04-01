@@ -1,0 +1,22 @@
+{
+  "name": "landingpage-lavacash",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page estática LavaCash — Eleventy + Netlify",
+  "scripts": {
+    "build:js": "esbuild src/_js/main.js --bundle --minify --format=esm --target=es2022 --legal-comments=none --drop:console --outfile=src/assets/js/app.js",
+    "dev:js": "esbuild src/_js/main.js --bundle --format=esm --target=es2022 --sourcemap --outfile=src/assets/js/app.js --watch",
+    "dev:11ty": "eleventy --serve",
+    "build": "npm run build:js && eleventy",
+    "start": "concurrently -k \"npm run dev:js\" \"npm run dev:11ty\"",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.27.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+_site/
+src/assets/js/*.map
+.DS_Store
+*.log
+.cursor
+.agents
