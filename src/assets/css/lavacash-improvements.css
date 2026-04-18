@@ -65,7 +65,7 @@
 .ba-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: var(--gap-block);
   margin-top: 48px;
   max-width: 900px;
   margin-left: auto;
@@ -73,7 +73,7 @@
 }
 
 .ba-card {
-  border-radius: 22px;
+  border-radius: var(--radius-3xl);
   padding: 28px 24px;
   border: 1px solid var(--gray-100);
   min-height: 220px;
@@ -81,7 +81,7 @@
 
 .ba-card--bad {
   background: linear-gradient(165deg, #fff5f3 0%, var(--white) 100%);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card-sm);
 }
 
 .ba-card--good {
@@ -106,7 +106,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 
 .ba-tag--bad {
@@ -142,7 +142,7 @@
   max-width: 720px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: var(--gap-tight);
 }
 
 .why-bullets li {
@@ -152,7 +152,7 @@
   padding: 16px 18px;
   background: var(--white);
   border: 1px solid var(--gray-100);
-  border-radius: 14px;
+  border-radius: var(--radius-md);
 }
 
 .compare-wrap {
@@ -162,10 +162,10 @@
 .compare-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--gray-100);
   background: var(--white);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-card-md);
 }
 
 .compare-table {
@@ -227,17 +227,17 @@
 .trust-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: var(--gap-block);
   max-width: 1120px;
   margin: 0 auto;
 }
 
 .trust-item {
   display: flex;
-  gap: 14px;
+  gap: var(--gap-tight);
   align-items: flex-start;
   padding: 20px 18px;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--gray-100);
   background: var(--gray-50);
 }
@@ -271,7 +271,7 @@
 .pricing-extra {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 20px;
+  gap: var(--gap-block);
   max-width: 900px;
   margin: 40px auto 0;
   align-items: stretch;
@@ -280,7 +280,7 @@
 .compare-mini {
   background: var(--gray-50);
   border: 1px solid var(--gray-100);
-  border-radius: 18px;
+  border-radius: var(--radius-xl);
   padding: 24px 22px;
   text-align: left;
 }
@@ -308,7 +308,7 @@
 .guarantee-card {
   background: linear-gradient(145deg, #f0fffc 0%, var(--white) 100%);
   border: 1px solid rgba(0, 194, 168, 0.28);
-  border-radius: 18px;
+  border-radius: var(--radius-xl);
   padding: 24px 22px;
   text-align: left;
 }
@@ -344,7 +344,7 @@
 .stats-bar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: var(--gap-tight);
   margin-top: 36px;
   margin-bottom: 8px;
 }
@@ -352,7 +352,7 @@
 .stats-bar-item {
   background: var(--white);
   border: 1px solid var(--gray-100);
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   padding: 16px 14px;
   text-align: center;
 }
@@ -401,10 +401,10 @@
 .roadmap-item {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: var(--gap-tight);
   flex-wrap: wrap;
   padding: 16px 18px;
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--gray-100);
   background: var(--gray-50);
 }
@@ -415,7 +415,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 5px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgba(0, 194, 168, 0.14);
   color: #0b6c5f;
   flex-shrink: 0;
@@ -442,7 +442,7 @@
 .lead-form {
   background: var(--white);
   border: 1px solid var(--gray-100);
-  border-radius: 20px;
+  border-radius: var(--radius-2xl);
   padding: 28px 24px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
 }
@@ -471,7 +471,7 @@
   font-family: var(--font);
   font-size: 15px;
   padding: 14px 16px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--gray-200);
   min-height: 48px;
 }
@@ -489,7 +489,7 @@
   color: var(--white);
   background: var(--gray-800);
   border: none;
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   padding: 14px 20px;
   cursor: pointer;
   min-height: 48px;
@@ -517,6 +517,35 @@
   margin-top: 20px;
   font-size: 14px;
   color: #aeb2ba;
+}
+
+.hero-apk-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin: 18px 0 0;
+  max-width: 520px;
+}
+
+.hero-apk-link {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+.hero-apk-link:hover {
+  color: var(--accent);
+}
+
+.hero-apk-meta {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-400);
 }
 
 .benefits-inline-price {
@@ -556,7 +585,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 5px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgba(255, 159, 67, 0.2);
   color: #b45309;
   line-height: 1;
@@ -569,7 +598,7 @@
 .product-scope-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: var(--gap-block);
   margin-top: 40px;
   max-width: 920px;
   margin-left: auto;
@@ -577,16 +606,16 @@
 }
 
 .product-scope-card {
-  border-radius: 18px;
+  border-radius: var(--radius-xl);
   padding: 22px 20px 24px;
   text-align: left;
   border: 1px solid var(--gray-100);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card-sm);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .product-scope-card:hover {
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--shadow-card-lg);
   transform: translateY(-2px);
 }
 
@@ -618,7 +647,7 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 9px;
+  border-radius: var(--radius-compact);
   font-size: 14px;
   font-weight: 800;
   flex-shrink: 0;
@@ -706,7 +735,7 @@
   align-items: center;
   gap: 10px;
   padding: 14px 14px 16px;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   background: linear-gradient(
     145deg,
     rgba(255, 171, 64, 0.14) 0%,
@@ -877,7 +906,7 @@ dialog.lead-popup-dlg {
   max-width: 420px;
   width: calc(100vw - 40px);
   background: var(--white);
-  border-radius: 20px;
+  border-radius: var(--radius-2xl);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
   color: inherit;
   animation: leadPopupIn 0.35s ease both;
@@ -979,7 +1008,7 @@ dialog.lead-popup-dlg::backdrop {
   font-family: var(--font);
   font-size: 16px;
   padding: 14px 14px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--gray-200);
   min-height: 48px;
 }
@@ -997,7 +1026,7 @@ dialog.lead-popup-dlg::backdrop {
   color: var(--white);
   background: var(--gray-800);
   border: none;
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   padding: 14px 18px;
   cursor: pointer;
   min-height: 48px;
@@ -1028,7 +1057,7 @@ dialog.lead-popup-dlg::backdrop {
     max-width: none;
     margin-block: auto auto;
     margin-inline: 0;
-    border-radius: 20px 20px 0 0;
+    border-radius: var(--radius-2xl) 20px 0 0;
     padding-bottom: calc(22px + env(safe-area-inset-bottom, 0));
     animation: leadPopupInMobile 0.38s ease both;
     max-height: min(85vh, 520px);

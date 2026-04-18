@@ -6,11 +6,13 @@ import { initReveal } from "./modules/reveal.js";
 import { initNav } from "./modules/nav.js";
 import { initNavScroll } from "./modules/nav-scroll.js";
 import { initLeadPopup } from "./modules/lead-popup.js";
+import { initFloatingCta } from "./modules/floating-cta.js";
 
 function bootstrap() {
   initReveal();
   initNav();
   initNavScroll();
+  initFloatingCta();
   const leadRoot = document.querySelector("[data-lead-popup]");
   if (leadRoot) {
     initLeadPopup(leadRoot);

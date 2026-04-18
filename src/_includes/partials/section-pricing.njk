@@ -46,7 +46,7 @@
         <div class="price-feature"><span class="pf-check" aria-hidden="true">✓</span>Sem cartão · Sem compromisso</div>
       </div>
       <div class="price-cta">
-        <a href="#comecar" class="btn-cta-price">Testar {{ lavacash.trialDays }} dias grátis — sem cartão</a>
+        <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#comecar{% endif %}" class="btn-cta-price"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer"{% endif %}>{% if lavacash.android.apkUrl %}{{ lavacash.android.trialCtaLabel }}{% else %}Testar {{ lavacash.trialDays }} dias grátis — sem cartão{% endif %}</a>
         <div class="price-micro">
           <span>Sem cartão</span><span>Cancele quando quiser</span><span>Suporte incluído</span>
         </div>

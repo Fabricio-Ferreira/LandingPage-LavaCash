@@ -4,8 +4,8 @@
   <h1 id="hero-heading">Controle seu lava-jato<br>em <em>segundos,</em> não em folhas soltas.</h1>
   <p class="hero-sub">{% if lavacash.launchOffer.active %}Veja lucro e atendimentos com clareza, organize clientes e pare de fechar o dia no chute — a partir de <strong>R${{ lavacash.launchOffer.formatted }}/mês</strong> na oferta atual.{% else %}Veja lucro e atendimentos com clareza, organize clientes e pare de fechar o dia no chute — direto no celular por R${{ lavacash.priceMonthly.formatted }}/mês.{% endif %}</p>
   <div class="hero-ctas">
-    <a href="#comecar" class="btn-primary">
-      Testar agora — sem cartão
+    <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#comecar{% endif %}" class="btn-primary"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer"{% endif %}>
+      {{ lavacash.android.trialCtaLabel }}
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <a href="#demos" class="btn-secondary">Ver como funciona</a>

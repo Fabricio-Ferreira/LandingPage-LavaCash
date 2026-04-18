@@ -8,10 +8,14 @@
       <a href="#demos">Como funciona</a>
       <a href="#por-que">Por quê</a>
       <a href="#escopo-produto">Escopo</a>
+      <a href="#roadmap">Roadmap</a>
       <a href="#beneficios">Benefícios</a>
       <a href="#preco">Preço</a>
       <a href="#faq">FAQ</a>
-      <a href="https://wa.me/5551991312348?text=Ol%C3%A1%21%20Seja%20bem-vindo%28a%29%20ao%20LavaCash.%20Quero%20comecar%20meu%20teste%20gratis." class="nav-cta" target="_blank" rel="noopener noreferrer">Testar grátis</a>
+      <div class="nav-cta-group">
+        <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#dicas{% endif %}" class="nav-cta nav-cta--trial"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ lavacash.android.trialCtaLabel }}</a>
+        <a href="{{ lavacash.whatsappUrl }}" class="nav-cta nav-cta--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
     </div>
     <button type="button" class="nav-mobile-btn" aria-label="Menu" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle>
       <span></span><span></span><span></span>

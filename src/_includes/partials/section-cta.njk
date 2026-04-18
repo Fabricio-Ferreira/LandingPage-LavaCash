@@ -3,7 +3,8 @@
   <h2 class="cta-title">Veja seu dia com clareza — <em>{{ lavacash.trialDays }} dias grátis.</em></h2>
   <p class="cta-desc">Sem cartão. Sem compromisso. Em poucos minutos você já organiza atendimentos e faturamento.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/5551991312348?text=Ol%C3%A1%21%20Seja%20bem-vindo%28a%29%20ao%20LavaCash.%20Quero%20comecar%20meu%20teste%20gratis." class="btn-cta-white" target="_blank" rel="noopener noreferrer">Testar agora — sem cartão</a>
+    <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#dicas{% endif %}" class="btn-cta-white"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ lavacash.android.trialCtaLabel }}</a>
+    <a href="{{ lavacash.whatsappUrl }}" class="btn-cta-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     <a href="#faq" class="btn-cta-ghost">Ver dúvidas frequentes</a>
   </div>
   <div class="cta-micro">

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title | default("LavaCash — Controle seus atendimentos no celular") }}</title>
   <meta name="description" content="{{ description | default("Controle atendimentos, faturamento e rotina no celular. 7 dias grátis, sem cartão.") }}">
+  {% set canonicalHref = site.url + (page.url | default("/")) %}
+  <link rel="canonical" href="{{ canonicalHref }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -20,7 +22,15 @@
   <meta property="og:title" content="{{ title | default("LavaCash") }}">
   <meta property="og:description" content="{{ description | default("Controle simples para negócios reais.") }}">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:url" content="{{ canonicalHref }}">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="{{ site.url }}{{ site.ogImagePath }}">
+  <meta property="og:image:alt" content="LavaCash — app para lava-jato">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title | default("LavaCash") }}">
+  <meta name="twitter:description" content="{{ description | default("Controle simples para negócios reais.") }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.ogImagePath }}">
+  <meta name="theme-color" content="#00c2a8">
 </head>
 <body>
   <a class="skip-link" href="#main">Ir para o conteúdo</a>

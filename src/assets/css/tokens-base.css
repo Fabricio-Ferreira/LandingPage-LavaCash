@@ -24,6 +24,51 @@
   --ink-blue: #0a2740;
   --font: "DM Sans", system-ui, sans-serif;
   --font-display: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+
+  /* Spacing (4px base) — alinhar cards / secções em todo o site */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --gap-tight: 14px;
+  --gap-block: 20px;
+
+  /* Border radius — mesmo vocabulário que benefits / header */
+  --radius-xs: 8px;
+  --radius-compact: 9px;
+  --radius-sm: 12px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-xl: 18px;
+  --radius-2xl: 20px;
+  --radius-3xl: 22px;
+  --radius-pill: 999px;
+  --radius-floating: 32px;
+
+  /* Sombras recorrentes */
+  --shadow-card-sm: 0 10px 28px rgba(0, 0, 0, 0.05);
+  --shadow-card-md: 0 12px 32px rgba(0, 0, 0, 0.06);
+  --shadow-card-lg: 0 14px 36px rgba(0, 0, 0, 0.07);
+  --shadow-accent: 0 8px 24px rgba(0, 194, 168, 0.3);
+  --shadow-accent-lg: 0 12px 40px rgba(0, 194, 168, 0.5);
+  --shadow-floating: 0 8px 32px rgba(0, 194, 168, 0.4);
+
+  --border-card: 1px solid var(--gray-100);
+
+  /* WhatsApp (CTAs secundários) */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #1da851;
+  --shadow-whatsapp: 0 8px 28px rgba(37, 211, 102, 0.45);
+  --shadow-whatsapp-lg: 0 12px 36px rgba(37, 211, 102, 0.55);
+
+  /* Floating mobile — breakpoint alinhado a JS */
+  --floating-collapse-max: 600px;
 }
 
 section[id] {

@@ -1,0 +1,24 @@
+{% set canonicalHref = site.url + (page.url | default("/")) %}
+{% if lavacash.launchOffer.active %}
+{% set offerPrice = lavacash.launchOffer.reais + "." + lavacash.launchOffer.centavos %}
+{% else %}
+{% set offerPrice = lavacash.priceMonthly.reais + "." + lavacash.priceMonthly.centavos %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LavaCash",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android",
+  "inLanguage": "pt-BR",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "price": "{{ offerPrice }}",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ canonicalHref }}"
+  }{% if lavacash.android.apkUrl %},
+  "downloadUrl": "{{ lavacash.android.apkUrl }}"{% endif %}
+}
+</script>
