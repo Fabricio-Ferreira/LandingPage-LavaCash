@@ -161,6 +161,12 @@
   color: var(--accent);
 }
 
+.cta-section .cta-hint {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .site-footer {
   background: var(--black);
   color: #b9bcc2;

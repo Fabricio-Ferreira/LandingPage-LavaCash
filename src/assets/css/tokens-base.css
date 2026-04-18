@@ -21,8 +21,13 @@
   --accent-dark: #009e89;
   --accent-light: #e0f8f5;
   --forest: #0f2d28;
+  --ink-blue: #0a2740;
   --font: "DM Sans", system-ui, sans-serif;
   --font-display: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 72px;
 }
 
 html {
