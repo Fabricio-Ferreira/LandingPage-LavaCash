@@ -11,9 +11,30 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# HTML: revalidação rápida + edge pode servir stale enquanto revalida (deploy invalida por hash em assets)
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/privacidade/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/termos/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate, stale-while-revalidate=604800"
 
 # Segurança base (landing estática; ajustar se incorporares iframes ou APIs)
 [[headers]]

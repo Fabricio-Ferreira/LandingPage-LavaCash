@@ -7,15 +7,10 @@
   <meta name="description" content="{{ description | default("Controle atendimentos, faturamento e rotina no celular. 7 dias grátis, sem cartão.") }}">
   {% set canonicalHref = site.url + (page.url | default("/")) %}
   <link rel="canonical" href="{{ canonicalHref }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/tokens-base.css">
-  <link rel="stylesheet" href="/assets/css/header-hero-marquee.css">
-  <link rel="stylesheet" href="/assets/css/sections-demos-pain.css">
-  <link rel="stylesheet" href="/assets/css/benefits-pricing-testimonials.css">
-  <link rel="stylesheet" href="/assets/css/faq-cta-footer-reveal-responsive.css">
-  <link rel="stylesheet" href="/assets/css/lavacash-improvements.css">
+  {% if page.url == "/" %}
+  <link rel="preload" as="image" href="/assets/images/hero-video-poster.webp" fetchpriority="high">
+  {% endif %}
+  <link rel="stylesheet" href="/assets/css/lavacash.bundle.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/app-icon.png">
   <link rel="shortcut icon" href="/assets/images/app-icon.png">
   <link rel="apple-touch-icon" href="/assets/images/app-icon.png">

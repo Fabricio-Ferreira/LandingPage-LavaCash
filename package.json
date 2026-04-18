@@ -4,17 +4,24 @@
   "private": true,
   "description": "Landing page estática LavaCash — Eleventy + Netlify",
   "scripts": {
+    "build:fonts": "node scripts/build-fonts.mjs",
+    "build:css": "node scripts/build-css-bundle.mjs",
+    "build:poster": "node scripts/build-poster.mjs",
+    "build:assets": "npm run build:fonts && npm run build:css && npm run build:poster",
     "build:js": "esbuild src/_js/main.js --bundle --minify --format=esm --target=es2022 --legal-comments=none --drop:console --outfile=src/assets/js/app.js",
     "dev:js": "esbuild src/_js/main.js --bundle --format=esm --target=es2022 --sourcemap --outfile=src/assets/js/app.js --watch",
     "dev:11ty": "eleventy --serve",
-    "build": "npm run build:js && eleventy",
-    "start": "concurrently -k \"npm run dev:js\" \"npm run dev:11ty\"",
+    "build": "npm run build:assets && npm run build:js && eleventy",
+    "start": "npm run build:css && concurrently -k \"npm run dev:js\" \"npm run dev:11ty\"",
     "clean": "rm -rf _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@fontsource/bricolage-grotesque": "^5.2.10",
+    "@fontsource/dm-sans": "^5.2.8",
     "concurrently": "^9.2.1",
-    "esbuild": "^0.27.4"
+    "esbuild": "^0.27.4",
+    "ffmpeg-static": "^5.3.0"
   },
   "engines": {
     "node": ">=18"

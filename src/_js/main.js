@@ -7,8 +7,10 @@ import { initNav } from "./modules/nav.js";
 import { initNavScroll } from "./modules/nav-scroll.js";
 import { initLeadPopup } from "./modules/lead-popup.js";
 import { initFloatingCta } from "./modules/floating-cta.js";
+import { initLazyDemoVideos } from "./modules/lazy-demo-videos.js";
 
 function bootstrap() {
+  initLazyDemoVideos();
   initReveal();
   initNav();
   initNavScroll();

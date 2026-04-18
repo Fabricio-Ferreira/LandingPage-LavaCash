@@ -14,9 +14,21 @@ export function initNavScroll() {
   if (!nav) {
     return;
   }
+  let ticking = false;
   const onScroll = () => {
     nav.classList.toggle(SCROLLED_CLASS, window.scrollY > SCROLL_THRESHOLD_PX);
+    ticking = false;
   };
   onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) {
+        return;
+      }
+      ticking = true;
+      window.requestAnimationFrame(onScroll);
+    },
+    { passive: true },
+  );
 }
