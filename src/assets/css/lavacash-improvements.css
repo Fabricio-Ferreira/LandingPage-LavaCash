@@ -566,21 +566,26 @@
 }
 
 .price-badge--launch {
-  background: rgba(255, 159, 67, 0.2);
-  color: #b45309;
+  background: rgba(255, 159, 67, 0.22);
+  color: #ffc966;
 }
 
 .price-launch-ends {
   font-size: 12px;
-  color: #d4d6da;
+  color: rgba(255, 255, 255, 0.88);
   margin: 0 0 12px;
   line-height: 1.45;
 }
 
 .price-was-wrap {
   font-size: 14px;
-  color: #b8bcc4;
+  color: rgba(255, 255, 255, 0.78);
   margin: 0 0 8px;
+}
+
+.price-was-wrap s {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration-color: rgba(255, 255, 255, 0.45);
 }
 
 .roadmap-text a {
