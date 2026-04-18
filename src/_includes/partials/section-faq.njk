@@ -5,42 +5,24 @@
       <h2 class="section-title section-title--narrow">Respostas antes<br>de você perguntar</h2>
     </div>
     <div class="faq-list">
+      {% set td = lavacash.trialDays | string %}
+      {% if not lavacash.refund.moneyBackAfterPaidSubscription %}
+        {% set refundExtra = " Não há reembolso em dinheiro automático após a cobrança da mensalidade; você controla a renovação." %}
+      {% else %}
+        {% set refundExtra = "" %}
+      {% endif %}
+      {% for item in faq %}
       <details class="faq-item">
-        <summary class="faq-q">Preciso de cartão para testar os {{ lavacash.trialDays }} dias?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Não. O teste grátis não exige nenhum dado de cartão. Você começa, usa por {{ lavacash.trialDays }} dias completos e só decide se quer continuar depois. Sem pegadinha.</div>
+        <summary class="faq-q">{{ item.question | replace("__TRIAL_DAYS__", td) }}<span class="faq-arrow" aria-hidden="true">+</span></summary>
+        <div class="faq-a">
+          {% set raw = item.answerHtml
+            | replace("__TRIAL_DAYS__", td)
+            | replace("__REFUND_EXTRA__", refundExtra)
+            | replace("__IOS_ROADMAP__", lavacash.ios.roadmap) %}
+          {{ raw | safe }}
+        </div>
       </details>
-      <details class="faq-item">
-        <summary class="faq-q">Quanto tempo vou economizar no dia a dia?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Depende do tamanho da operação, mas a ideia é cortar conferência manual e idas e vindas ao caderno. Na prática, muitos donos relatam menos tempo fechando o dia e menos erro no valor cobrado.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">Consigo integrar com meu banco automaticamente?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Hoje o foco é registro de atendimentos e visão de faturamento dentro do app. Conciliação bancária automática não faz parte do produto — veja a seção <a href="#escopo-produto">O que o app faz hoje</a>. Se isso for crítico para você, fale com a gente no WhatsApp para entender o roadmap.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">E se eu não gostar?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Use os {{ lavacash.trialDays }} dias grátis com calma. Se não fizer sentido, não continue — o teste não cobra cartão. Depois, cancele a assinatura quando quiser, sem fidelidade.{% if not lavacash.refund.moneyBackAfterPaidSubscription %} Não há reembolso em dinheiro automático após a cobrança da mensalidade; você controla a renovação.{% endif %}</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">É complicado de usar?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">O foco inteiro do LavaCash é simplicidade. Tudo foi pensado para uso rápido no celular. Se você sabe usar o WhatsApp, você usa o LavaCash.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">E se eu já uso caderno ou anotações?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Caderno anota. O LavaCash organiza, mostra histórico, entrega visão do dia e do mês — e nunca se perde ou molha com a esponja.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">E se eu tiver dúvidas durante o uso?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Você tem suporte via WhatsApp incluído na mensalidade. Atendimento ágil e prático para te ajudar a usar o sistema no dia a dia.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">Posso cancelar quando quiser?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Sim. Sem multa, sem fidelidade, sem burocracia. Mas a gente tem certeza que vai fazer sentido.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">Funciona em qual celular?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Hoje o LavaCash funciona em celulares Android. {{ lavacash.ios.roadmap }} Acompanhe também a seção “Vem por aí” nesta página.</div>
-      </details>
+      {% endfor %}
     </div>
   </div>
 </section>

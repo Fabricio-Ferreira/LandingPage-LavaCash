@@ -9,6 +9,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "LavaCash",
+  "description": "App para lava-jato: atendimentos, faturamento e relatórios no Android.",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Android",
   "inLanguage": "pt-BR",
@@ -19,6 +20,7 @@
     "availability": "https://schema.org/InStock",
     "url": "{{ canonicalHref }}"
   }{% if lavacash.android.apkUrl %},
-  "downloadUrl": "{{ lavacash.android.apkUrl }}"{% endif %}
+  "downloadUrl": "{{ lavacash.android.apkUrl }}"{% endif %}{% if lavacash.softwareSchema and lavacash.softwareSchema.aggregateRating %},
+  "aggregateRating": {{ lavacash.softwareSchema.aggregateRating | jsonify | safe }}{% endif %}
 }
 </script>

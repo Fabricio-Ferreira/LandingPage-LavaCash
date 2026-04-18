@@ -8,8 +8,12 @@ import { initNavScroll } from "./modules/nav-scroll.js";
 import { initLeadPopup } from "./modules/lead-popup.js";
 import { initFloatingCta } from "./modules/floating-cta.js";
 import { initLazyDemoVideos } from "./modules/lazy-demo-videos.js";
+import { initAnalytics } from "./modules/analytics.js";
+import { initPromoCountdown } from "./modules/promo-countdown.js";
 
 function bootstrap() {
+  initAnalytics();
+  initPromoCountdown();
   initLazyDemoVideos();
   initReveal();
   initNav();

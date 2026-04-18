@@ -8,7 +8,29 @@
       <div class="price-top">
         {% if lavacash.launchOffer.active %}
         <p class="price-badge price-badge--launch">Oferta de lançamento</p>
+        {% if lavacash.launchOffer.endsAt %}
+        <div
+          class="price-promo-urgency"
+          data-promo-countdown
+          data-ends="{{ lavacash.launchOffer.endsAt }}"
+        >
+          <p class="price-promo-deadline">
+            Promo válida até
+            <time datetime="{{ lavacash.launchOffer.endsAt }}">{{ lavacash.launchOffer.endsAt | formatDateBR }}</time>
+          </p>
+          <p class="price-promo-timer" aria-live="polite">
+            <span class="price-promo-timer-label">Termina em</span>
+            <span data-countdown-display>—</span>
+          </p>
+          {% if lavacash.launchOffer.spotsRemaining %}
+          <p class="price-promo-spots">
+            Restam <strong>{{ lavacash.launchOffer.spotsRemaining }}</strong> acessos nesta condição
+          </p>
+          {% endif %}
+        </div>
+        {% else %}
         <p class="price-launch-ends">{{ lavacash.launchOffer.endsLabel }}</p>
+        {% endif %}
         <div class="price-promo-hero" aria-label="Comparativo de preço promocional">
           <p class="price-promo-save">Economize R$ {{ lavacash.launchOffer.savingsFormatted | default("20,00") }}/mês nesta condição</p>
           <div class="price-promo-compare">
@@ -46,7 +68,11 @@
         <div class="price-feature"><span class="pf-check" aria-hidden="true">✓</span>Sem cartão · Sem compromisso</div>
       </div>
       <div class="price-cta">
-        <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#comecar{% endif %}" class="btn-cta-price"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer"{% endif %}>{% if lavacash.android.apkUrl %}{{ lavacash.android.trialCtaLabel }}{% else %}Testar {{ lavacash.trialDays }} dias grátis — sem cartão{% endif %}</a>
+        <a
+          href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#comecar{% endif %}"
+          class="btn-cta-price"
+          {% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer" data-ga-event="download_apk" data-ga-location="pricing"{% else %} data-ga-event="cta_trial" data-ga-location="pricing"{% endif %}
+        >{% if lavacash.android.apkUrl %}{{ lavacash.android.trialCtaLabel }}{% else %}Testar {{ lavacash.trialDays }} dias grátis — sem cartão{% endif %}</a>
         <div class="price-micro">
           <span>Sem cartão</span><span>Cancele quando quiser</span><span>Suporte incluído</span>
         </div>
@@ -62,8 +88,17 @@
         </ul>
       </div>
       <aside class="guarantee-card" aria-labelledby="guarantee-title">
-        <p id="guarantee-title" class="guarantee-title">Satisfação no uso</p>
-        <p class="guarantee-text">{{ lavacash.trialDays }} dias grátis para avaliar com calma. Sem cartão. Se não fizer sentido, é só não continuar — sem letras miúdas na cobrança do teste.{% if lavacash.refund.moneyBackAfterPaidSubscription %} Após a mensalidade, aplicam-se as regras de reembolso divulgadas nos termos.{% else %} Após contratar a assinatura, não há reembolso em dinheiro automático; você pode cancelar a renovação quando quiser, sem fidelidade.{% endif %}</p>
+        <h3 id="guarantee-title" class="guarantee-title">Satisfação no uso</h3>
+        <ul class="compare-mini-list">
+          <li><strong>Teste grátis:</strong> {{ lavacash.trialDays }} dias para avaliar com calma.</li>
+          <li><strong>Sem cartão:</strong> nenhum dado de cartão para começar.</li>
+          <li><strong>Sem pegadinha:</strong> se não fizer sentido, é só não continuar — sem cobrança escondida no período de teste.</li>
+          {% if lavacash.refund.moneyBackAfterPaidSubscription %}
+          <li><strong>Após a mensalidade:</strong> aplicam-se as regras de reembolso divulgadas nos <a href="/termos/">termos</a>.</li>
+          {% else %}
+          <li><strong>Assinatura:</strong> após contratar, não há reembolso automático em dinheiro; você pode cancelar a renovação quando quiser, sem fidelidade.</li>
+          {% endif %}
+        </ul>
       </aside>
     </div>
   </div>

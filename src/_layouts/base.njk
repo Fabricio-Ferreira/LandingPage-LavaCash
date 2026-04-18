@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title | default("LavaCash — Controle seus atendimentos no celular") }}</title>
-  <meta name="description" content="{{ description | default("Controle atendimentos, faturamento e rotina no celular. 7 dias grátis, sem cartão.") }}">
+  <meta name="description" content="{{ description | default("Controle atendimentos, faturamento e relatórios no celular. Teste grátis sem cartão. App Android para lava-jato.") }}">
   {% set canonicalHref = site.url + (page.url | default("/")) %}
   <link rel="canonical" href="{{ canonicalHref }}">
   {% if page.url == "/" %}
@@ -14,18 +14,24 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/app-icon.png">
   <link rel="shortcut icon" href="/assets/images/app-icon.png">
   <link rel="apple-touch-icon" href="/assets/images/app-icon.png">
-  <meta property="og:title" content="{{ title | default("LavaCash") }}">
-  <meta property="og:description" content="{{ description | default("Controle simples para negócios reais.") }}">
+  <meta property="og:title" content="{{ title | default("LavaCash — Controle seu lava-jato no celular") }}">
+  <meta property="og:description" content="{{ description | default("Atendimentos, faturamento e relatórios em segundos. Teste grátis, sem cartão. Baixe o APK (Android).") }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ canonicalHref }}">
+  <meta property="og:site_name" content="LavaCash">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:image" content="{{ site.url }}{{ site.ogImagePath }}">
-  <meta property="og:image:alt" content="LavaCash — app para lava-jato">
+  <meta property="og:image:alt" content="{{ site.ogImageAlt | default("LavaCash — app para lava-jato") }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title | default("LavaCash") }}">
-  <meta name="twitter:description" content="{{ description | default("Controle simples para negócios reais.") }}">
+  <meta name="twitter:title" content="{{ title | default("LavaCash — Controle seu lava-jato no celular") }}">
+  <meta name="twitter:description" content="{{ description | default("Atendimentos e relatórios no celular. Teste grátis, sem cartão.") }}">
   <meta name="twitter:image" content="{{ site.url }}{{ site.ogImagePath }}">
+  <meta name="twitter:image:alt" content="{{ site.ogImageAlt | default("LavaCash — app para lava-jato") }}">
+  {% if site.twitterSite %}
+  <meta name="twitter:site" content="{{ site.twitterSite }}">
+  {% endif %}
   <meta name="theme-color" content="#00c2a8">
+  {% include "partials/analytics-head.njk" %}
 </head>
 <body>
   <a class="skip-link" href="#main">Ir para o conteúdo</a>

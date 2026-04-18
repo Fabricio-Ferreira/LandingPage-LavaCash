@@ -1,0 +1,29 @@
+{% set td = lavacash.trialDays | string %}
+{% if not lavacash.refund.moneyBackAfterPaidSubscription %}
+  {% set refundExtra = " Não há reembolso em dinheiro automático após a cobrança da mensalidade; você controla a renovação." %}
+{% else %}
+  {% set refundExtra = "" %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in faq %}
+    {% set raw = item.answerHtml
+      | replace("__TRIAL_DAYS__", td)
+      | replace("__REFUND_EXTRA__", refundExtra)
+      | replace("__IOS_ROADMAP__", lavacash.ios.roadmap) %}
+    {% set plain = raw | stripHtml %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | replace("__TRIAL_DAYS__", td) | jsonify | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ plain | jsonify | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

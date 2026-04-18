@@ -2,8 +2,8 @@
   <div class="section-inner lead-inner">
     <div class="lead-copy reveal">
       <p class="section-label">Fique por dentro</p>
-      <h2 id="lead-heading" class="section-title">Receba dicas curtas de gestão para o seu lava-jato.</h2>
-      <p class="section-desc">Sem spam: só conteúdo útil e novidades do produto. Cancele quando quiser.</p>
+      <h2 id="lead-heading" class="section-title">{{ lavacash.leadMagnet.sectionTitle }}</h2>
+      <p class="section-desc">{{ lavacash.leadMagnet.sectionDesc }}</p>
     </div>
     <form class="lead-form reveal reveal-delay-1" name="lead-lavacash" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
       <input type="hidden" name="form-name" value="lead-lavacash">
@@ -13,7 +13,7 @@
       <div class="lead-fields">
         <label class="lead-label" for="lead-email">Seu melhor e-mail</label>
         <input class="lead-input" id="lead-email" name="email" type="email" autocomplete="email" required placeholder="voce@empresa.com.br">
-        <button class="lead-submit" type="submit">Quero receber dicas</button>
+        <button class="lead-submit" type="submit">{{ lavacash.leadMagnet.buttonLabel }}</button>
       </div>
       <p class="lead-disclaimer">Ao enviar, você concorda em receber e-mails conforme nossa <a href="/privacidade/">política de privacidade</a>.</p>
     </form>

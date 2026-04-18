@@ -1,0 +1,38 @@
+[
+  {
+    "question": "Preciso de cartão para testar os __TRIAL_DAYS__ dias?",
+    "answerHtml": "Não. O teste grátis não exige nenhum dado de cartão. Você começa, usa por __TRIAL_DAYS__ dias completos e só decide se quer continuar depois. Sem pegadinha."
+  },
+  {
+    "question": "Quanto tempo vou economizar no dia a dia?",
+    "answerHtml": "Depende do tamanho da operação, mas a ideia é cortar conferência manual e idas e vindas ao caderno. Na prática, muitos donos relatam menos tempo fechando o dia e menos erro no valor cobrado."
+  },
+  {
+    "question": "Consigo integrar com meu banco automaticamente?",
+    "answerHtml": "Hoje o foco é registro de atendimentos e visão de faturamento dentro do app. Conciliação bancária automática não faz parte do produto — veja a seção <a href=\"#escopo-produto\">O que o app faz hoje</a>. Se isso for crítico para você, fale com a gente no WhatsApp para entender o roadmap."
+  },
+  {
+    "question": "E se eu não gostar?",
+    "answerHtml": "Use os __TRIAL_DAYS__ dias grátis com calma. Se não fizer sentido, não continue — o teste não cobra cartão. Depois, cancele a assinatura quando quiser, sem fidelidade.__REFUND_EXTRA__"
+  },
+  {
+    "question": "É complicado de usar?",
+    "answerHtml": "O foco inteiro do LavaCash é simplicidade. Tudo foi pensado para uso rápido no celular. Se você sabe usar o WhatsApp, você usa o LavaCash."
+  },
+  {
+    "question": "E se eu já uso caderno ou anotações?",
+    "answerHtml": "Caderno anota. O LavaCash organiza, mostra histórico, entrega visão do dia e do mês — e nunca se perde ou molha com a esponja."
+  },
+  {
+    "question": "E se eu tiver dúvidas durante o uso?",
+    "answerHtml": "Você tem suporte via WhatsApp incluído na mensalidade. Atendimento ágil e prático para te ajudar a usar o sistema no dia a dia."
+  },
+  {
+    "question": "Posso cancelar quando quiser?",
+    "answerHtml": "Sim. Sem multa, sem fidelidade, sem burocracia. Mas a gente tem certeza que vai fazer sentido."
+  },
+  {
+    "question": "Funciona em qual celular?",
+    "answerHtml": "Hoje o LavaCash funciona em celulares Android. __IOS_ROADMAP__ Acompanhe também a seção “Vem por aí” nesta página."
+  }
+]

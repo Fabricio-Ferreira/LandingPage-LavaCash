@@ -11,11 +11,34 @@
     "formatted": "29,90",
     "reais": "29",
     "centavos": "90",
+    "endsAt": "2026-04-30T23:59:59-03:00",
+    "spotsRemaining": 42,
     "endsLabel": "Condições e prazo informados no ato da contratação.",
     "savingsFormatted": "20,00"
   },
   "refund": {
     "moneyBackAfterPaidSubscription": false
+  },
+  "socialProof": {
+    "active": true,
+    "headline": "+ de 12 lava-jatos já registram atendimentos com o LavaCash"
+  },
+  "softwareSchema": {
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.9,
+      "ratingCount": 28,
+      "bestRating": 5,
+      "worstRating": 1
+    }
+  },
+  "leadMagnet": {
+    "sectionTitle": "Receba a planilha gratuita de controle de atendimentos + dicas curtas de gestão.",
+    "sectionDesc": "Sem spam: planilha pronta para imprimir ou editar no Excel/Google Sheets, além de novidades do produto. Cancele quando quiser.",
+    "buttonLabel": "Quero a planilha e as dicas",
+    "popupTitle": "Planilha + dicas para o seu lava-jato",
+    "popupDesc": "Enviamos o link da planilha e e-mails úteis de vez em quando. Sem spam.",
+    "popupSubmit": "Enviar planilha"
   },
   "android": {
     "apkUrl": "https://landingpage-lavacash.netlify.app/assets/downloads/lavacash.apk",

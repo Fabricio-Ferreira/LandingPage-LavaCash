@@ -1,0 +1,10 @@
+{% if lavacash.socialProof and lavacash.socialProof.active and lavacash.socialProof.headline %}
+<section class="social-proof-strip" aria-label="Adoção do produto">
+  <div class="section-inner social-proof-inner">
+    <p class="social-proof-text">
+      <span class="social-proof-icon" aria-hidden="true">✓</span>
+      {{ lavacash.socialProof.headline }}
+    </p>
+  </div>
+</section>
+{% endif %}

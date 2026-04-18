@@ -3,9 +3,9 @@
   <h2 class="cta-title">Veja seu dia com clareza — <em>{{ lavacash.trialDays }} dias grátis.</em></h2>
   <p class="cta-desc">Sem cartão. Sem compromisso. Em poucos minutos você já organiza atendimentos e faturamento.</p>
   <div class="cta-btns">
-    <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#dicas{% endif %}" class="btn-cta-white"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ lavacash.android.trialCtaLabel }}</a>
-    <a href="{{ lavacash.whatsappUrl }}" class="btn-cta-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    <a href="#faq" class="btn-cta-ghost">Ver dúvidas frequentes</a>
+    <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#dicas{% endif %}" class="btn-cta-white"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer" data-ga-event="download_apk" data-ga-location="footer_cta"{% else %} data-ga-event="cta_trial" data-ga-location="footer_cta"{% endif %}>{{ lavacash.android.trialCtaLabel }}</a>
+    <a href="{{ lavacash.whatsappUrl }}" class="btn-cta-whatsapp" target="_blank" rel="noopener noreferrer" data-ga-event="cta_whatsapp" data-ga-location="footer_cta">WhatsApp</a>
+    <a href="#faq" class="btn-cta-ghost" data-ga-event="cta_secondary" data-ga-location="footer_cta_faq">Ver dúvidas frequentes</a>
   </div>
   <div class="cta-micro">
     <span>Sem cartão</span><span>{{ lavacash.trialDays }} dias grátis</span><span>Cancele quando quiser</span><span>Download direto do APK</span>

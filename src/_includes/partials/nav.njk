@@ -13,8 +13,8 @@
       <a href="#preco">Preço</a>
       <a href="#faq">FAQ</a>
       <div class="nav-cta-group">
-        <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#dicas{% endif %}" class="nav-cta nav-cta--trial"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ lavacash.android.trialCtaLabel }}</a>
-        <a href="{{ lavacash.whatsappUrl }}" class="nav-cta nav-cta--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="{% if lavacash.android.apkUrl %}{{ lavacash.android.apkUrl }}{% else %}#dicas{% endif %}" class="nav-cta nav-cta--trial"{% if lavacash.android.apkUrl %} target="_blank" rel="noopener noreferrer" data-ga-event="download_apk" data-ga-location="nav"{% else %} data-ga-event="cta_trial" data-ga-location="nav"{% endif %}>{{ lavacash.android.trialCtaLabel }}</a>
+        <a href="{{ lavacash.whatsappUrl }}" class="nav-cta nav-cta--whatsapp" target="_blank" rel="noopener noreferrer" data-ga-event="cta_whatsapp" data-ga-location="nav">WhatsApp</a>
       </div>
     </div>
     <button type="button" class="nav-mobile-btn" aria-label="Menu" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle>
