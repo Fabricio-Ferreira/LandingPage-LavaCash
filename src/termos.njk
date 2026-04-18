@@ -22,7 +22,8 @@ description: Termos de uso da plataforma LavaCash.
       <p>Você é responsável pela segurança das suas credenciais de acesso e por todas as ações realizadas em sua conta.</p>
 
       <h2>4. Planos, cobrança e cancelamento</h2>
-      <p>Quando aplicável, valores, prazos e condições de cobrança serão informados antes da contratação. O cancelamento pode ser solicitado a qualquer momento conforme regras vigentes no plano.</p>
+      <p>O período de teste gratuito tem duração de <strong>{{ lavacash.trialDays }} dias</strong>, sem exigência de cartão de crédito, conforme divulgado na landing. A mensalidade vigente é de <strong>R${{ lavacash.priceMonthly.formatted }}</strong> (sujeita a ofertas pontuais divulgadas no momento da contratação).</p>
+      <p>Quando aplicável, valores, prazos e condições de cobrança serão informados antes da contratação. O cancelamento da renovação pode ser solicitado a qualquer momento, sem fidelidade, conforme as regras vigentes no plano. {% if not lavacash.refund.moneyBackAfterPaidSubscription %}Não há reembolso automático em dinheiro após a cobrança da mensalidade, salvo disposição legal ou política específica informada por escrito.{% endif %}</p>
 
       <h2>5. Propriedade intelectual</h2>
       <p>Interface, marca, código e materiais relacionados ao LavaCash são protegidos por direitos autorais e não podem ser reproduzidos sem autorização.</p>

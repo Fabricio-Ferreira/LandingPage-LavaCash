@@ -1,0 +1,39 @@
+<dialog
+  id="lc-lead-dialog"
+  class="lead-popup-dlg"
+  data-lead-popup
+  aria-labelledby="lead-popup-title"
+  aria-describedby="lead-popup-desc"
+>
+  <button type="button" class="lead-popup-x" data-lead-popup-close aria-label="Fechar">×</button>
+  <p class="lead-popup-kicker">Newsletter</p>
+  <h2 id="lead-popup-title" class="lead-popup-title">Dicas para o seu lava-jato</h2>
+  <p id="lead-popup-desc" class="lead-popup-desc">Um e-mail ocasional, sem spam. Cancele quando quiser.</p>
+  <form
+    class="lead-popup-form"
+    name="lead-lavacash-popup"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field-popup"
+    action="/"
+  >
+    <input type="hidden" name="form-name" value="lead-lavacash-popup">
+    <p class="lead-popup-honeypot">
+      <label>Não preencha: <input name="bot-field-popup" autocomplete="off" tabindex="-1"></label>
+    </p>
+    <label class="lead-popup-label" for="lead-popup-email">E-mail</label>
+    <input
+      class="lead-popup-input"
+      id="lead-popup-email"
+      name="email"
+      type="email"
+      autocomplete="email"
+      required
+      placeholder="voce@empresa.com.br"
+    >
+    <button class="lead-popup-submit" type="submit">Quero receber</button>
+    <p class="lead-popup-foot">
+      <a href="/privacidade/">Privacidade</a> · também pode se inscrever <a href="#dicas">na página</a>.
+    </p>
+  </form>
+</dialog>

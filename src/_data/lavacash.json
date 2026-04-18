@@ -1,0 +1,36 @@
+{
+  "trialDays": 7,
+  "priceMonthly": {
+    "formatted": "49,90",
+    "reais": "49",
+    "centavos": "90"
+  },
+  "launchOffer": {
+    "active": true,
+    "formatted": "29,90",
+    "reais": "29",
+    "centavos": "90",
+    "endsLabel": "Condições e prazo informados no ato da contratação."
+  },
+  "refund": {
+    "moneyBackAfterPaidSubscription": false
+  },
+  "ios": {
+    "badge": "iOS em breve",
+    "roadmap": "Versão para iPhone em desenvolvimento; sem data pública de lançamento.",
+    "waitlistUrl": ""
+  },
+  "productScope": {
+    "title": "O que o app faz hoje",
+    "intro": "Transparência do escopo do produto — sem prometer integrações que ainda não existem na landing.",
+    "includes": [
+      "Registro de atendimentos e clientes no celular (Android)",
+      "Relatórios de faturamento dentro do app",
+      "Suporte por WhatsApp incluído na mensalidade"
+    ],
+    "excludes": [
+      "Conciliação automática com banco ou importação de extrato",
+      "Integrações nativas com sistemas de agendamento de terceiros"
+    ]
+  }
+}

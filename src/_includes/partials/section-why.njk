@@ -7,7 +7,7 @@
     </div>
     <ul class="why-bullets reveal reveal-delay-1">
       <li><strong>Foco no negócio:</strong> atendimento, cliente e relatório — sem módulos que você nunca abre.</li>
-      <li><strong>Custo previsível:</strong> um plano, um preço. Nada de surpresa na fatura.</li>
+      <li><strong>Custo previsível:</strong> um plano{% if lavacash.launchOffer.active %} — hoje com oferta de lançamento{% endif %}.</li>
       <li><strong>Humano quando precisa:</strong> dúvida resolvida no WhatsApp, sem fila de ticket eterna.</li>
     </ul>
     <div class="compare-wrap reveal reveal-delay-2">
@@ -27,7 +27,7 @@
               <th scope="row">Custo mensal</th>
               <td>R$ 0 (mas sem visão do negócio)</td>
               <td>Planos variados, muitas vezes mais caros</td>
-              <td><strong>R$ 29,90</strong> tudo incluso</td>
+              <td>{% if lavacash.launchOffer.active %}<strong>R$ {{ lavacash.launchOffer.formatted }}</strong> na promo (tabela: de R$ {{ lavacash.priceMonthly.formatted }}){% else %}<strong>R$ {{ lavacash.priceMonthly.formatted }}</strong> tudo incluso{% endif %}</td>
             </tr>
             <tr>
               <th scope="row">Tempo para registrar um atendimento</th>

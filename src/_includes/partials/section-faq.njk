@@ -6,8 +6,8 @@
     </div>
     <div class="faq-list">
       <details class="faq-item">
-        <summary class="faq-q">Preciso de cartão para testar os 7 dias?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Não. O teste grátis não exige nenhum dado de cartão. Você começa, usa por 7 dias completos e só decide se quer continuar depois. Sem pegadinha.</div>
+        <summary class="faq-q">Preciso de cartão para testar os {{ lavacash.trialDays }} dias?<span class="faq-arrow" aria-hidden="true">+</span></summary>
+        <div class="faq-a">Não. O teste grátis não exige nenhum dado de cartão. Você começa, usa por {{ lavacash.trialDays }} dias completos e só decide se quer continuar depois. Sem pegadinha.</div>
       </details>
       <details class="faq-item">
         <summary class="faq-q">Quanto tempo vou economizar no dia a dia?<span class="faq-arrow" aria-hidden="true">+</span></summary>
@@ -15,11 +15,11 @@
       </details>
       <details class="faq-item">
         <summary class="faq-q">Consigo integrar com meu banco automaticamente?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Hoje o foco é registro de atendimentos e visão de faturamento dentro do app. Conciliação bancária automática não faz parte do produto neste momento — se isso for crítico para você, fale com a gente no WhatsApp para entender o roadmap.</div>
+        <div class="faq-a">Hoje o foco é registro de atendimentos e visão de faturamento dentro do app. Conciliação bancária automática não faz parte do produto — veja a seção <a href="#escopo-produto">O que o app faz hoje</a>. Se isso for crítico para você, fale com a gente no WhatsApp para entender o roadmap.</div>
       </details>
       <details class="faq-item">
         <summary class="faq-q">E se eu não gostar?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Use os 7 dias grátis com calma. Se não fizer sentido, não continue — o teste não cobra cartão. Depois, cancele a assinatura quando quiser, sem fidelidade.</div>
+        <div class="faq-a">Use os {{ lavacash.trialDays }} dias grátis com calma. Se não fizer sentido, não continue — o teste não cobra cartão. Depois, cancele a assinatura quando quiser, sem fidelidade.{% if not lavacash.refund.moneyBackAfterPaidSubscription %} Não há reembolso em dinheiro automático após a cobrança da mensalidade; você controla a renovação.{% endif %}</div>
       </details>
       <details class="faq-item">
         <summary class="faq-q">É complicado de usar?<span class="faq-arrow" aria-hidden="true">+</span></summary>
@@ -39,7 +39,7 @@
       </details>
       <details class="faq-item">
         <summary class="faq-q">Funciona em qual celular?<span class="faq-arrow" aria-hidden="true">+</span></summary>
-        <div class="faq-a">Hoje o LavaCash funciona em celulares Android. Estamos trabalhando em uma versão para iOS — acompanhe a seção “Vem por aí” nesta página.</div>
+        <div class="faq-a">Hoje o LavaCash funciona em celulares Android. {{ lavacash.ios.roadmap }} Acompanhe também a seção “Vem por aí” nesta página.</div>
       </details>
     </div>
   </div>

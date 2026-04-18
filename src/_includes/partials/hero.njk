@@ -1,8 +1,8 @@
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-bg" aria-hidden="true"></div>
-  <p class="hero-badge">7 dias grátis · Sem cartão de crédito · Android · <span class="hero-badge-muted">iOS em breve</span></p>
+  <p class="hero-badge">{{ lavacash.trialDays }} dias grátis · Sem cartão de crédito · Android · <span class="hero-badge-muted">{{ lavacash.ios.badge }}</span></p>
   <h1 id="hero-heading">Controle seu lava-jato<br>em <em>segundos,</em> não em folhas soltas.</h1>
-  <p class="hero-sub">Veja lucro e atendimentos com clareza, organize clientes e pare de fechar o dia no chute — direto no celular por R$29,90/mês.</p>
+  <p class="hero-sub">{% if lavacash.launchOffer.active %}Veja lucro e atendimentos com clareza, organize clientes e pare de fechar o dia no chute — a partir de <strong>R${{ lavacash.launchOffer.formatted }}/mês</strong> na oferta atual.{% else %}Veja lucro e atendimentos com clareza, organize clientes e pare de fechar o dia no chute — direto no celular por R${{ lavacash.priceMonthly.formatted }}/mês.{% endif %}</p>
   <div class="hero-ctas">
     <a href="#comecar" class="btn-primary">
       Testar agora — sem cartão

@@ -1,0 +1,27 @@
+<section class="product-scope-section" id="escopo-produto" aria-labelledby="product-scope-heading">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">Escopo do produto</p>
+      <h2 id="product-scope-heading" class="section-title section-title--center">{{ lavacash.productScope.title }}</h2>
+      <p class="section-desc section-desc--center">{{ lavacash.productScope.intro }}</p>
+    </div>
+    <div class="product-scope-grid">
+      <div class="product-scope-card reveal">
+        <h3 class="product-scope-card-title">Inclui</h3>
+        <ul class="product-scope-list">
+          {% for line in lavacash.productScope.includes %}
+            <li>{{ line }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="product-scope-card product-scope-card--muted reveal reveal-delay-1">
+        <h3 class="product-scope-card-title">Não inclui (hoje)</h3>
+        <ul class="product-scope-list">
+          {% for line in lavacash.productScope.excludes %}
+            <li>{{ line }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
