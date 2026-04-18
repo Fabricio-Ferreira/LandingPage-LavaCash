@@ -10,7 +10,8 @@
     "formatted": "29,90",
     "reais": "29",
     "centavos": "90",
-    "endsLabel": "Condições e prazo informados no ato da contratação."
+    "endsLabel": "Condições e prazo informados no ato da contratação.",
+    "savingsFormatted": "20,00"
   },
   "refund": {
     "moneyBackAfterPaidSubscription": false
@@ -22,15 +23,20 @@
   },
   "productScope": {
     "title": "O que o app faz hoje",
-    "intro": "Transparência do escopo do produto — sem prometer integrações que ainda não existem na landing.",
+    "intro": "Lista alinhada à versão Android em uso — recursos reais do fluxo operacional (Supabase). Sem prometer o que ainda não está no app.",
     "includes": [
-      "Registro de atendimentos e clientes no celular (Android)",
-      "Relatórios de faturamento dentro do app",
+      "Cadastro de clientes e veículos; busca por placa ou nome (busca normalizada)",
+      "Novo atendimento com serviços, totais e fechamento com forma de pagamento (Pix, dinheiro, débito e crédito)",
+      "Dashboard do dia: resumo de atendimentos, recebimento por forma de pagamento e despesas do período",
+      "Relatórios diário e mensal: comparativo com o mês anterior, melhor dia da semana e desempenho por semanas no mês",
+      "Exportação de relatórios em PDF para compartilhar ou imprimir",
+      "Lista de atendimentos em andamento e histórico para consulta",
       "Suporte por WhatsApp incluído na mensalidade"
     ],
     "excludes": [
       "Conciliação automática com banco ou importação de extrato",
-      "Integrações nativas com sistemas de agendamento de terceiros"
+      "Integrações nativas com sistemas de agendamento de terceiros",
+      "Versão iOS — hoje só Android na loja"
     ]
   }
 }

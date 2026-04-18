@@ -2,7 +2,19 @@
   <div class="section-inner">
     <div class="reveal">
       <p class="section-label">O que está incluso</p>
-      <h2 class="section-title">Por R${{ lavacash.priceMonthly.formatted }} você não paga um app. Você paga por <em>mais controle</em> no seu dia.</h2>
+      <h2 class="section-title">
+        {% if lavacash.launchOffer.active %}
+        Por
+        <span class="benefits-inline-price" aria-label="Preço promocional de lançamento">
+          <span class="benefits-price-promo">R${{ lavacash.launchOffer.formatted }}</span>
+          <span class="benefits-price-was"><s>R${{ lavacash.priceMonthly.formatted }}</s></span>
+          <span class="benefits-price-pill">Promo lançamento</span>
+        </span>
+        você não paga um app. Você paga por <em>mais controle</em> no seu dia.
+        {% else %}
+        Por R${{ lavacash.priceMonthly.formatted }} você não paga um app. Você paga por <em>mais controle</em> no seu dia.
+        {% endif %}
+      </h2>
     </div>
     <div class="benefits-grid">
       <article class="benefit-card reveal">

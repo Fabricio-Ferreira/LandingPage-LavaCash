@@ -9,9 +9,27 @@
         {% if lavacash.launchOffer.active %}
         <p class="price-badge price-badge--launch">Oferta de lançamento</p>
         <p class="price-launch-ends">{{ lavacash.launchOffer.endsLabel }}</p>
-        <p class="price-was-wrap">De <s>R${{ lavacash.priceMonthly.formatted }}/mês</s></p>
-        <p class="price-amount"><sup>R$</sup>{{ lavacash.launchOffer.reais }}<sub>,{{ lavacash.launchOffer.centavos }}<span class="price-period">/mês</span></sub></p>
-        <p class="price-desc">Depois dos {{ lavacash.trialDays }} dias de teste, a mensalidade segue <strong>R${{ lavacash.launchOffer.formatted }}/mês</strong> enquanto esta oferta estiver ativa. Cancele quando quiser.</p>
+        <div class="price-promo-hero" aria-label="Comparativo de preço promocional">
+          <p class="price-promo-save">Economize R$ {{ lavacash.launchOffer.savingsFormatted | default("20,00") }}/mês nesta condição</p>
+          <div class="price-promo-compare">
+            <div class="price-promo-col price-promo-col--was">
+              <span class="price-promo-kicker">Preço de tabela</span>
+              <span class="price-promo-old-wrap">
+                <span class="price-promo-label">De</span>
+                <s class="price-promo-old">R${{ lavacash.priceMonthly.formatted }}</s>
+                <span class="price-promo-unit">/mês</span>
+              </span>
+            </div>
+            <span class="price-promo-arrow" aria-hidden="true">→</span>
+            <div class="price-promo-col price-promo-col--now">
+              <span class="price-promo-kicker price-promo-kicker--accent">Promo lançamento</span>
+              <p class="price-promo-hero-amount">
+                <sup>R$</sup>{{ lavacash.launchOffer.reais }}<sub>,{{ lavacash.launchOffer.centavos }}<span class="price-promo-hero-period">/mês</span></sub>
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="price-desc price-desc--launch">Depois dos {{ lavacash.trialDays }} dias de teste, a assinatura segue <strong>na mesma condição desta promo</strong> enquanto a oferta de lançamento estiver ativa. Cancele quando quiser.</p>
         {% else %}
         <p class="price-badge">Teste grátis por {{ lavacash.trialDays }} dias</p>
         <p class="price-amount"><sup>R$</sup>{{ lavacash.priceMonthly.reais }}<sub>,{{ lavacash.priceMonthly.centavos }}<span class="price-period">/mês</span></sub></p>
