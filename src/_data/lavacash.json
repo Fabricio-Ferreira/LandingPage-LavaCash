@@ -18,7 +18,7 @@
     "moneyBackAfterPaidSubscription": false
   },
   "android": {
-    "apkUrl": "https://sfdemmrpvvhdtecszbgr.supabase.co/storage/v1/object/sign/app-releases/lavacash/latest.apk?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9iZWYxYzY0Ni0yYTNiLTQ2NTItOTdlNy03NDlhNTgzNWE1YzgiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHAtcmVsZWFzZXMvbGF2YWNhc2gvbGF0ZXN0LmFwayIsImlhdCI6MTc3NjQ5MjEzMiwiZXhwIjoxNzc5MDg0MTMyfQ.x7o-0djnzi92hEKLq9SChZwFlldBDvTwME7gf_G_cwc",
+    "apkUrl": "https://landingpage-lavacash.netlify.app/assets/downloads/lavacash.apk",
     "apkLabel": "Baixar APK (Android)",
     "trialCtaLabel": "Testar grátis agora"
   },
