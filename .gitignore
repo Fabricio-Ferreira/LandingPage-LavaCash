@@ -5,4 +5,3 @@ src/assets/js/*.map
 *.log
 .cursor
 .agents
-*.apk
